@@ -77,8 +77,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_cuadro_05 IMPLEMENTATION.
-
+CLASS ZCL_CUADRO_05 IMPLEMENTATION.
 
 
   METHOD constructor.
@@ -86,9 +85,11 @@ CLASS zcl_cuadro_05 IMPLEMENTATION.
     ANO_CREACION = i_ano_creacion.
   ENDMETHOD.
 
+
   METHOD GET_ANO_CREACION."devuelve la informacion que hay en el atributo y lo pasamos al parametro o_ano_creacion
     O_ANO_CREACION = ANO_CREACION.
   ENDMETHOD.
+
 
   METHOD GET_TITULO. "devuelve la informacion que hay en el atributo y lo pasamos al parametro o_titulo
     O_TITULO = TITULO.
@@ -98,22 +99,6 @@ CLASS zcl_cuadro_05 IMPLEMENTATION.
   METHOD SET_TITULO. " cogemos el valor de entrada y lo pasamos al atributo o sea le cambiamos ael valor al atributo titulo conlo que viene de entrada
     TITULO = I_TITULO.
   ENDMETHOD.
-
-  METHOD SET_ANO_CREACION.
-    ANO_CREACION = I_ANO_CREACION.
-  ENDMETHOD.
-
-
-
-   METHOD ESTA_EN_EXPOSICION.
-    IF ANO_CREACION > 1800.
-      O_EXPOSICION = ABAP_TRUE.
-    ELSE.
-      O_EXPOSICION = ABAP_FALSE.
-    ENDIF.
-  ENDMETHOD.
-
-
 
 
   METHOD mostrar_ficha.
@@ -128,11 +113,17 @@ CLASS zcl_cuadro_05 IMPLEMENTATION.
     o_ficha = | Titulo: { titulo } / Año: { ANO_CREACION } / { lv_estado } |.
   ENDMETHOD.
 
+
+  METHOD SET_ANO_CREACION.
+    ANO_CREACION = I_ANO_CREACION.
+  ENDMETHOD.
+
+
+   METHOD ESTA_EN_EXPOSICION.
+    IF ANO_CREACION > 1800.
+      O_EXPOSICION = ABAP_TRUE.
+    ELSE.
+      O_EXPOSICION = ABAP_FALSE.
+    ENDIF.
+  ENDMETHOD.
 ENDCLASS.
-
-
-
-
-
-
-

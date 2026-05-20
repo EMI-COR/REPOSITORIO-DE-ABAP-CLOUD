@@ -45,32 +45,39 @@ ENDCLASS.
 
 
 
-CLASS zcl_calculadora80_05 IMPLEMENTATION.
+CLASS ZCL_CALCULADORA80_05 IMPLEMENTATION.
+
 
   METHOD constructor.
     valor_actual = I_valor_actual.
     propietario = I_propietario.
   ENDMETHOD.
 
+
   METHOD get_VALOR_ACTUAL.
     o_VALOR_ACTUAL = valor_actual.
   ENDMETHOD.
+
 
   METHOD get_PROPIETARIO.
     o_PROPIETARIO = propietario.
   ENDMETHOD.
 
+
   METHOD set_PROPIETARIO.
     propietario = i_PROPIETARIO.
   ENDMETHOD.
+
 
   METHOD sumar.
     valor_actual = valor_actual + i_suma.
   ENDMETHOD.
 
+
   METHOD resta.
     valor_actual = valor_actual - i_resta.
   ENDMETHOD.
+
 
   METHOD DIVidir.
     IF i_dividir <> 0.
@@ -78,10 +85,8 @@ CLASS zcl_calculadora80_05 IMPLEMENTATION.
     ENDIF.
      ENDMETHOD.
 
+
   METHOD multiplicar.
     valor_actual = valor_actual * i_multiplicar.
   ENDMETHOD.
-
-
-
 ENDCLASS.

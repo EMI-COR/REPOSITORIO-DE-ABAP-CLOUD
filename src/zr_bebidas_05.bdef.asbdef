@@ -1,0 +1,52 @@
+managed implementation in class ZBP_R_BEBIDAS_05 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_BEBIDAS_05 alias ZrBebidas05
+persistent table ZBEBIDAS_05
+extensible
+draft table ZBEBIDAS_05_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   Codigo;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Codigo;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZBEBIDAS_05 corresponding extensible
+  {
+    Codigo = CODIGO;
+    Nombre = NOMBRE;
+    Tipo = TIPO;
+    Origen = ORIGEN;
+    Graduacion = GRADUACION;
+    Precio = PRECIO;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

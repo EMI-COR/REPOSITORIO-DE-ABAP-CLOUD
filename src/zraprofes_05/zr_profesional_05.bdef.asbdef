@@ -1,0 +1,54 @@
+managed implementation in class ZBP_R_PROFESIONAL_05 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_PROFESIONAL_05 alias ZrProfesional05
+persistent table ZPROFESIONAL_05
+extensible
+draft table ZPRFESIONAL_05_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+  ID;
+
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  ID;
+
+
+  create;
+  update;
+  delete;
+
+  // Ini Botón Subida de Sueldo
+  action subida_sueldo result [1] $self;
+  // Fin Botón Subida de Sueldo
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zprofesional_00 corresponding extensible
+    {
+      ID                 = ID;
+      Nombre             = NOMBRE;
+      Profesion          = PROFESION;
+      Salario            = SALARIO;
+      IsActive           = IS_ACTIVE;
+      CreatedBy          = CREATED_BY;
+      CreatedAt          = CREATED_AT;
+      LastChangedBy      = LAST_CHANGED_BY;
+      LastChangedAt      = LAST_CHANGED_AT;
+      LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    }
+ }

@@ -10,8 +10,9 @@ CLASS zcl_total_precio DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-CLASS zcl_total_precio IMPLEMENTATION.
 
+
+CLASS ZCL_TOTAL_PRECIO IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -121,5 +122,4 @@ CLASS zcl_total_precio IMPLEMENTATION.
 
 
   ENDMETHOD.
-
 ENDCLASS.

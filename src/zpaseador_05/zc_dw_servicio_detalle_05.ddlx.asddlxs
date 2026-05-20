@@ -1,0 +1,93 @@
+//@Metadata.layer: #CORE
+//@UI.headerInfo.title.type: #STANDARD
+//@UI.headerInfo.title.value: 'id_servicio'
+//@UI.headerInfo.description.type: #STANDARD
+//@UI.headerInfo.description.value: 'id_servicio'
+
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Servicio'
+@UI.headerInfo.typeNamePlural: 'Servicios'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'id_servicio'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'nombre_paseador'
+
+
+annotate view ZC_DW_SERVICIO_DETALLE_05 with
+{
+  @EndUserText.label: 'id_servicio'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'id_servicio'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'id_servicio'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  id_servicio;
+  
+  @EndUserText.label: 'nombre_paseador'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'nombre_paseador'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'nombre_paseador'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  nombre_paseador;
+  
+  @EndUserText.label: 'nombre_perro'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'nombre_perro'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'nombre_perro'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  nombre_perro;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  tipo_servicio;
+  
+  @EndUserText.label: 'nombre_dueno'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'nombre_dueno'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'nombre_dueno'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  nombre_dueno;
+  
+  
+}

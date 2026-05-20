@@ -1,0 +1,4 @@
+@EndUserText.label: 'VISTA DE CONSUMO DEL CATALOGO DE BEBIDAS'
+define service ZUI_bebidas_05 {
+  expose ZC_bebidas_05 as BEBIDAS;
+}

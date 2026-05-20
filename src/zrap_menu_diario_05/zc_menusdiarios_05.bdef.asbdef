@@ -1,0 +1,26 @@
+projection implementation in class ZBP_C_MENUSDIARIOS_05 unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZC_MENUSDIARIOS_05 alias ZcMenusdiarios05
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+
+//   // Ini Botón Subida de Sueldo
+//   use action aumenta_platos;
+   use action modificar_nombre;
+//  // Fin Botón Subida de Sueldo
+
+}

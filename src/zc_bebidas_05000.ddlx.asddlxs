@@ -1,0 +1,167 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Codigo'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Codigo'
+annotate view ZC_BEBIDAS_05000 with
+{
+  @EndUserText.label: 'Codigo'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Codigo'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Codigo'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Codigo;
+  
+  @EndUserText.label: 'Nombre'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Nombre'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Nombre'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Nombre;
+  
+  @EndUserText.label: 'Tipo'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Tipo'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Tipo'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Tipo;
+  
+  @EndUserText.label: 'Origen'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Origen'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Origen'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Origen;
+  
+  @EndUserText.label: 'Graduacion'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Graduacion'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Graduacion'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Graduacion;
+  
+  @EndUserText.label: 'Precio'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Precio'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Precio'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Precio;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  LastChangedAt;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  LocalLastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 120 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  _BaseEntity;
+}

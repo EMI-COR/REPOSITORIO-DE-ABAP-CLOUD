@@ -13,7 +13,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_bombilla_ecd IMPLEMENTATION.
+CLASS ZCL_BOMBILLA_ECD IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

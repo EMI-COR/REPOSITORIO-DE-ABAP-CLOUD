@@ -1,0 +1,58 @@
+managed implementation in class ZBP_R_PERSONAS_05 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_PERSONAS_05 alias ZrPersonas05
+persistent table ZPERSONAS_05
+extensible
+draft table ZPERSONAS_05_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   PersonID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   PersonID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZPERSONAS_05 corresponding extensible
+  {
+    PersonID = PERSON_ID;
+    FirstName = FIRST_NAME;
+    LastName = LAST_NAME;
+    BirthDate = BIRTH_DATE;
+    Gender = GENDER;
+    Email = EMAIL;
+    Phone = PHONE;
+    Country = COUNTRY;
+    Street = STREET;
+    City = CITY;
+    PostalCode = POSTAL_CODE;
+    IsActive = IS_ACTIVE;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

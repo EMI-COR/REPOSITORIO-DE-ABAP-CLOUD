@@ -1,0 +1,59 @@
+managed implementation in class ZBP_R_MENUSDIARIOS_05 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_MENUSDIARIOS_05 alias ZrMenusdiarios05
+persistent table ZMENUSDIARIOS_05
+extensible
+draft table ZMNSDIARIOS_05_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   IdMenu;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   IdMenu;
+
+
+  create;
+  update;
+  delete;
+
+
+//// Ini Botón Subida de Sueldo
+// action aumenta_platos result [1] $self;
+ action modificar_nombre parameter ZABS_MODIFICAR_NOMBRE_05 result [1] $self;
+//  // Fin Botón Subida de Sueldo
+
+
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZMENUSDIARIOS_05 corresponding extensible
+  {
+    IdMenu = ID_MENU;
+    TipoMenu = TIPO_MENU;
+    NombreMenu = NOMBRE_MENU;
+    NumPlatos = NUM_PLATOS;
+    IsActive = IS_ACTIVE;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

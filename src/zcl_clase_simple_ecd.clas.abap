@@ -76,15 +76,19 @@ CLASS zcl_clase_simple_ecd DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_clase_simple_ecd IMPLEMENTATION.
+
+CLASS ZCL_CLASE_SIMPLE_ECD IMPLEMENTATION.
+
 
   METHOD leer.
     o_numero = mv_numero.
   ENDMETHOD.
 
+
   METHOD escribir.
     mv_numero = i_numero.
   ENDMETHOD.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -101,7 +105,4 @@ CLASS zcl_clase_simple_ecd IMPLEMENTATION.
     out->write( lv_numero ).
 
   ENDMETHOD.  "✓ Mayúsculas
-
 ENDCLASS.
-"Pulsa F9 en Eclipse y verás 20 dos veces en la consola. ¿Seguimos con el siguiente ejercicio?Sonnet 4.6
-

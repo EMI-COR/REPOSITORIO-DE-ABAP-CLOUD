@@ -55,7 +55,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_productos_05 IMPLEMENTATION.
+CLASS ZCL_PRODUCTOS_05 IMPLEMENTATION.
+
 
 METHOD insertar.
 
@@ -96,8 +97,6 @@ METHOD insertar.
     ENDMETHOD.
 
 
-
-
         METHOD listar_todos.
   SELECT *
     FROM zproductos_05
@@ -105,6 +104,7 @@ METHOD insertar.
     ORDER BY producto_id
     INTO TABLE @o_productos.
 ENDMETHOD.
+
 
   METHOD modificar.
       DATA ls_producto TYPE zproductos_05.
@@ -133,12 +133,4 @@ ENDMETHOD.
       o_valido = abap_false.
     ENDIF.
   ENDMETHOD.
-
-
-
-
-
-
-
-
 ENDCLASS.
